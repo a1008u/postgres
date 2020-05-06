@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  # postgressqlの本体
+  teste-postgres-compose:
+    image: postgres:12.2
+    environment:
+      POSTGRES_PASSWORD: "Postgres2019!"
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./bk/data:/var/lib/postgresql/data
+    networks:
+      - postgres-compose-network
+  # postgressqlのpgadmin
+  teste-pgadmin-compose:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "renatogroff@yahoo.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "PgAdmin2019!"
+    ports:
+      - "16543:80"
+    depends_on:
+      - teste-postgres-compose
+    networks:
+      - postgres-compose-network
+
+# 擬似的にネットワークを作成する
+networks:
+  postgres-compose-network:
+    driver: bridge
