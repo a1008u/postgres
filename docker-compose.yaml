@@ -10,6 +10,9 @@ services:
       - "15432:5432"
     volumes:
       - ./bk/data:/var/lib/postgresql/data
+      - ./pgpass:/root/.pgpass
+      - ./code:/code
+      - ./conf/psqlrc:/root/.psqlrc
     networks:
       - postgres-compose-network
   # postgressqlのpgadmin

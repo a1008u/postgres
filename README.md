@@ -10,6 +10,7 @@ postgresについての勉強用
 docker exec -it postgres_teste-postgres-compose_1 bash
 
 # postgreに入る
-psql -h teste-postgres-compose -p 5432 -U postgres
+psql -h teste-postgres-compose -p 5432 -U postgres -d postgres
 ```
+
 

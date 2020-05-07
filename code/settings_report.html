@@ -1,0 +1,156 @@
+<html><head><style>H2{color:maroon}</style>
+<title>PostgreSQL Settings</title></head><body>
+<table><tr valign='top'><td><h2>Planner Settings</h2>
+<table border="1" cellspacing=0 cellpadding=0>
+
+  <tr><td colspan="2">&nbsp;</td></tr>
+  <tr valign="top">
+    <th>category</th>
+    <td align="left">Query Tuning / Other Planner Options</td>
+  </tr>
+  <tr valign="top">
+    <th>settings</th>
+    <td align="left">constraint_exclusion=partition<br />
+cursor_tuple_fraction=0.1<br />
+default_statistics_target=100<br />
+force_parallel_mode=off<br />
+from_collapse_limit=8<br />
+jit=on<br />
+join_collapse_limit=8<br />
+plan_cache_mode=auto</td>
+  </tr>
+
+  <tr><td colspan="2">&nbsp;</td></tr>
+  <tr valign="top">
+    <th>category</th>
+    <td align="left">Query Tuning / Planner Cost Constants</td>
+  </tr>
+  <tr valign="top">
+    <th>settings</th>
+    <td align="left">cpu_index_tuple_cost=0.005<br />
+cpu_operator_cost=0.0025<br />
+cpu_tuple_cost=0.01<br />
+effective_cache_size=524288<br />
+jit_above_cost=100000<br />
+jit_inline_above_cost=500000<br />
+jit_optimize_above_cost=500000<br />
+min_parallel_index_scan_size=64<br />
+min_parallel_table_scan_size=1024<br />
+parallel_setup_cost=1000<br />
+parallel_tuple_cost=0.1<br />
+random_page_cost=4<br />
+seq_page_cost=1</td>
+  </tr>
+
+  <tr><td colspan="2">&nbsp;</td></tr>
+  <tr valign="top">
+    <th>category</th>
+    <td align="left">Query Tuning / Planner Method Configuration</td>
+  </tr>
+  <tr valign="top">
+    <th>settings</th>
+    <td align="left">enable_bitmapscan=on<br />
+enable_gathermerge=on<br />
+enable_hashagg=on<br />
+enable_hashjoin=on<br />
+enable_indexonlyscan=on<br />
+enable_indexscan=on<br />
+enable_material=on<br />
+enable_mergejoin=on<br />
+enable_nestloop=on<br />
+enable_parallel_append=on<br />
+enable_parallel_hash=on<br />
+enable_partition_pruning=on<br />
+enable_partitionwise_aggregate=off<br />
+enable_partitionwise_join=off<br />
+enable_seqscan=on<br />
+enable_sort=on<br />
+enable_tidscan=on</td>
+  </tr>
+</table>
+
+</td><td><h2>File Locations</h2>
+<table border="1" cellspacing=0 cellpadding=0>
+  <tr valign="top">
+    <td align="left">config_file</td>
+    <td align="left">/var/lib/postgresql/data/postgresql.conf</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">data_directory</td>
+    <td align="left">/var/lib/postgresql/data</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">external_pid_file</td>
+    <td align="left">&nbsp; </td>
+  </tr>
+  <tr valign="top">
+    <td align="left">hba_file</td>
+    <td align="left">/var/lib/postgresql/data/pg_hba.conf</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">ident_file</td>
+    <td align="left">/var/lib/postgresql/data/pg_ident.conf</td>
+  </tr>
+</table>
+
+<h2>Memory Settings</h2>
+<table border="1" cellspacing=0 cellpadding=0>
+  <tr valign="top">
+    <td align="left">autovacuum_work_mem</td>
+    <td align="left">-1</td>
+    <td align="left">kB</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">dynamic_shared_memory_type</td>
+    <td align="left">posix</td>
+    <td align="left">NULL</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">huge_pages</td>
+    <td align="left">try</td>
+    <td align="left">NULL</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">maintenance_work_mem</td>
+    <td align="left">65536</td>
+    <td align="left">kB</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">max_prepared_transactions</td>
+    <td align="left">0</td>
+    <td align="left">NULL</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">max_stack_depth</td>
+    <td align="left">2048</td>
+    <td align="left">kB</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">shared_buffers</td>
+    <td align="left">16384</td>
+    <td align="left">8kB</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">shared_memory_type</td>
+    <td align="left">mmap</td>
+    <td align="left">NULL</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">temp_buffers</td>
+    <td align="left">1024</td>
+    <td align="left">8kB</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">track_activity_query_size</td>
+    <td align="left">1024</td>
+    <td align="left">B</td>
+  </tr>
+  <tr valign="top">
+    <td align="left">work_mem</td>
+    <td align="left">512000</td>
+    <td align="left">kB</td>
+  </tr>
+</table>
+
+</td></tr></table>
+</body></html>

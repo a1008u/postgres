@@ -1,0 +1,2 @@
+#hostname:port:database:username:password
+teste-postgres-compose:5432:postgres:postgres:Postgres2019!
